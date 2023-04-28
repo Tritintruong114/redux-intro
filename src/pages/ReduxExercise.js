@@ -152,7 +152,7 @@ const ProductOne = (props) => {
               variant="error"
               sx={{ width: "5rem" }}
             >
-              Remove
+              Remov
             </Button>
           </div>
         </Grid>
