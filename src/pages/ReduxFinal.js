@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Typography, Box, Grid } from "@mui/material";
+import { Container, Button, Typography, Box, Grid } from "@mui/material"
 import productOne from "../images/product1.gif";
 import productTwo from "../images/product2.gif";
 import ReactJson from "react-json-view";
@@ -10,15 +10,9 @@ import { addToCart, removeCart } from "../service/cart/slice";
 const RootComponent = (props) => {
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         RootComponent {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }}>{Object.keys(props).join(", ")}</Box>
         {`})`}
       </Typography>
       <Grid container spacing={2} p="1rem">
@@ -36,15 +30,9 @@ const RootComponent = (props) => {
 const ProductPage = (props) => {
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         Product Page {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }}>{Object.keys(props).join(", ")}</Box>
         {`})`}
       </Typography>
       <Grid container spacing={2} p="1rem">
@@ -66,15 +54,9 @@ const CartPage = (props) => {
 
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         Cart Page {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }}>{Object.keys(props).join(", ")}</Box>
         {`})`}
       </Typography>
       <Grid container spacing={2} p="1rem">
@@ -85,9 +67,7 @@ const CartPage = (props) => {
           <CartProductTwo />
         </Grid>
         <Grid item sx={12}>
-          <Typography p="0.5rem" variant="h5">
-            Total Price: 💵 {totalPrice}
-          </Typography>
+          <Typography p="0.5rem" variant="h5">Total Price: 💵 {totalPrice}</Typography>
         </Grid>
       </Grid>
     </WrapperBox>
@@ -99,6 +79,7 @@ const ProductOne = (props) => {
   // Replace the line below to get data of the first product from state.product
   // You should see the price is updated
   const product = useSelector((state) => state.product[0]);
+
 
   // Step 7
   // Define: const dispatch = useDispatch();
@@ -123,31 +104,22 @@ const ProductOne = (props) => {
 
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         {product.title} {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }}>{Object.keys(props).join(", ")}</Box>
         {`})`}
-      </Typography>
+      </Typography >
       <Grid container justifyContent="center">
         <Grid item xs={8}>
           <img src={productOne} alt="Product One" width="100%" />
-          <Typography p="0.5rem" variant="h6" sx={{ color: "success.main" }}>
-            💵 {product.price}
-          </Typography>
+          <Typography p="0.5rem" variant="h6" sx={{ color: "success.main" }}>💵 {product.price}</Typography>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8} >
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             <Button
               variant="success"
               sx={{ width: "5rem" }}
-              onClick={addProduct}
-            >
+              onClick={addProduct}>
               Add
             </Button>
             <Button
@@ -160,7 +132,7 @@ const ProductOne = (props) => {
           </div>
         </Grid>
       </Grid>
-    </WrapperBox>
+    </WrapperBox >
   );
 };
 
@@ -184,31 +156,22 @@ const ProductTwo = (props) => {
   };
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         {product.title} {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }}>{Object.keys(props).join(", ")}</Box>
         {`})`}
       </Typography>
       <Grid container justifyContent="center">
         <Grid item xs={8}>
           <img src={productTwo} alt="Product Two" width="100%" />
-          <Typography p="0.5rem" variant="h5" sx={{ color: "success.main" }}>
-            💵 {product.price}
-          </Typography>
+          <Typography p="0.5rem" variant="h5" sx={{ color: "success.main" }}>💵 {product.price}</Typography>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8} >
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             <Button
               variant="success"
               sx={{ width: "5rem" }}
-              onClick={addProduct}
-            >
+              onClick={addProduct}>
               Add
             </Button>
             <Button
@@ -230,28 +193,18 @@ const CartProductOne = (props) => {
   // Replace the line below to get data of the first product from state.cart.products
   // Change the price of products in `cart.reducer.js` to see the effect
   const product = useSelector((state) => state.cart.products[0]);
-  console.log("prodcut", product);
+  console.log("prodcut", product)
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         CartProduct 1 {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }} >{Object.keys(props).join(", ")}</Box>
         {`})`}
       </Typography>
       <Container fluid="true">
-        <Box>
-          <Typography p="0.5rem" variant="h6">
-            Quantity: {product.qty}
-          </Typography>
-          <Typography p="0.5rem" variant="h6">
-            Price: 💵 {product.price}
-          </Typography>
+        <Box >
+          <Typography p="0.5rem" variant="h6">Quantity: {product.qty}</Typography>
+          <Typography p="0.5rem" variant="h6">Price: 💵 {product.price}</Typography>
         </Box>
       </Container>
     </WrapperBox>
@@ -264,26 +217,17 @@ const CartProductTwo = (props) => {
   // Change the price of products in `cart.reducer.js` to see the effect
   const product = useSelector((state) => state.cart.products[1]);
 
+
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
         CartProduct 2 {`({`}
-        <Box component="span" sx={{ color: "warning.main" }}>
-          {Object.keys(props).join(", ")}
-        </Box>
+        <Box component="span" sx={{ color: "warning.main" }}>{Object.keys(props).join(", ")}</Box>
         {`})`}
-      </Typography>
+      </Typography >
       <Box>
-        <Typography p="0.5rem" variant="h6">
-          Quantity: {product.qty}
-        </Typography>
-        <Typography p="0.5rem" variant="h6">
-          Price: 💵 {product.price}
-        </Typography>
+        <Typography p="0.5rem" variant="h6">Quantity: {product.qty}</Typography>
+        <Typography p="0.5rem" variant="h6">Price: 💵 {product.price}</Typography>
       </Box>
     </WrapperBox>
   );
@@ -297,12 +241,8 @@ const Store = (props) => {
   const cart = useSelector((state) => state.cart);
   return (
     <WrapperBox>
-      <Typography
-        p="0.5rem"
-        variant="h5"
-        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
-      >
-        Stor
+      <Typography p="0.5rem" variant="h5" sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}>
+        Store
       </Typography>
       <Box sx={{ textAlign: "start" }}>
         <ReactJson
